@@ -1,5 +1,4 @@
 import React, { Component, FC } from 'react';
-import { Layout } from '../components/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -20,7 +19,7 @@ const Card: FC<CardProps> = ({ href, imgSrc, layoutId }) => (
 export default class Home extends Component {
   render() {
     return (
-      <Layout>
+      <div>
         <h1 className="text-4xl sm:text-6xl lg:text-7xl mt-10 md:mt-24 leading-none font-extrabold tracking-tight text-gray-900">
           Construa sites modernos com agilidade sem precisar sair do HTML.
         </h1>
@@ -30,7 +29,7 @@ export default class Home extends Component {
           <Card href={'/tailwind'} imgSrc={'/img/tailwind.svg'} layoutId={'tailwind-logo'} />
           <Card href={'/framermotion'} imgSrc={'/img/framermotion.svg'} layoutId={'framermotion-logo'} />
         </div>
-      </Layout>
+      </div>
     );
   }
 }

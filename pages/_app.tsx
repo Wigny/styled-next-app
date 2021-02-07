@@ -2,9 +2,16 @@ import '../styles/globals.css';
 import '../styles/tailwind.css';
 
 import { AppProps } from 'next/app'
+import { Layout } from '../components/Layout';
+import { FC } from 'react';
+import { AnimateSharedLayout } from 'framer-motion';
 
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const App: FC<AppProps> = ({ Component, pageProps }) => (
+  <AnimateSharedLayout>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </AnimateSharedLayout>
+)
 
 export default App;
